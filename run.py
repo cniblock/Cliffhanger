@@ -69,7 +69,7 @@ while incorrect_guesses < incorrect_guesses_allowed:
     print("Guesses remaining: {}".format(incorrect_guesses_allowed - incorrect_guesses))
     letter_user = input
         ("Enter a letter: ")
-        
+
 # Valitate user input
     if len(letter_user) == 1 and letter_user.isalpha():
         break
@@ -89,3 +89,16 @@ while incorrect_guesses < incorrect_guesses_allowed:
 
     print()
     print("Word: ", end="")
+
+# For loop to add letter to guesses and check if letter is in word
+    for letter in letters_word:
+        if letter_user == letter:
+            letters_guessed.append(letter_user)
+
+    for letter in letters_word:
+        if letter in letters_guessed:
+            print(letter + " ", end="")
+        else:
+            print("_ ", end="")
+
+    print()
