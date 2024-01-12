@@ -54,7 +54,7 @@ incorrect_guesses_allowed = len(cliffhanger_display)
 letters_word = list(word)
 wrong_letters = []
 
-# Initial print at start of the game
+# Initial print at the start of the game
 print()
 print("Welcome to the Cliffhanger word guessing game\n")
 print("The word has {} letters\n".format(len(letters_word)))
@@ -67,53 +67,51 @@ while incorrect_guesses < incorrect_guesses_allowed:
         print("{}, ".format(letter), end='')
     print()
     print("Guesses remaining: {}".format(incorrect_guesses_allowed - incorrect_guesses))
-    letter_user = input
-        ("Enter a letter: ")
+    letter_user = input("Enter a letter: ")
 
-# Valitate user input
+    # Validate user input
     if len(letter_user) == 1 and letter_user.isalpha():
-        break
-    else:
-        print("Error. Please enter a letter")
+        # Check if the letter has already been guessed
+        while letter_user in letters_guessed or letter_user in wrong_letters:
+            print()
+            print("You have already guessed this letter. Please guess another letter.")
+            letter_user = input("Enter a letter: ")
 
-# Check if the letter has already been guessed
-    while letter_user in letters_guessed or letter_user in wrong_letters:
+        # Check if the guessed letter is incorrect
+        if letter_user not in letters_word:
+            incorrect_guesses += 1
+            wrong_letters.append(letter_user)
+
+        # Update the guessed letters
+        letters_guessed.append(letter_user)
+
         print()
-        print("You have already guessed this letter. Please guess another letter")
-        letter_user = input("Enter a letter: ")
+        print("Word: ", end="")
 
-# Check if the guessed letter is incorrect
-    if letter_user not in letters_word:
-        incorrect_guesses += 1
-        wrong_letters.append(letter_user)
+        # For loop to add letter to guesses and check if letter is in word
+        for letter in letters_word:
+            if letter_user == letter:
+                letters_guessed.append(letter_user)
 
-    print()
-    print("Word: ", end="")
+        for letter in letters_word:
+            if letter in letters_guessed:
+                print(letter + " ", end="")
+            else:
+                print("_ ", end="")
 
-# For loop to add letter to guesses and check if letter is in word
-    for letter in letters_word:
-        if letter_user == letter:
-            letters_guessed.append(letter_user)
-
-    for letter in letters_word:
-        if letter in letters_guessed:
-            print(letter + " ", end="")
-        else:
-            print("_ ", end="")
-
-    print()
-
-# Check guess to see if incorrect and print Cliffhanger man
-    if incorrect_guesses:
-        print(cliffhanger_display[incorrect_guesses - 1])
-    print()
-    print(___________________________________________)
-
-    if len(letters_guessed) == len(letters_word):
         print()
-        print("Contratulations! You won!")
-        break
 
-if incorrect_guesses == incorrect_guesses_allowed :
+        # Check guess to see if incorrect and print Cliffhanger man
+        if incorrect_guesses:
+            print(cliffhanger_display[incorrect_guesses - 1])
+        print()
+        print("___________________________________________")
+
+        if len(letters_guessed) == len(letters_word):
+            print()
+            print("Congratulations! You won!")
+            break
+
+if incorrect_guesses == incorrect_guesses_allowed:
     print()
     print("You lost! Better luck next time!")
