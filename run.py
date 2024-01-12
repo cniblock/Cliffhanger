@@ -69,14 +69,20 @@ while incorrect_guesses < incorrect_guesses_allowed:
     print("Guesses remaining: {}".format(incorrect_guesses_allowed - incorrect_guesses))
     letter_user = input
         ("Enter a letter: ")
+        
+# Valitate user input
     if len(letter_user) == 1 and letter_user.isalpha():
         break
     else:
-        print("Error. Please enter a l
+        print("Error. Please enter a letter")
+
+# Check if the letter has already been guessed
     while letter_user in letters_guessed or letter_user in wrong_letters:
         print()
         print("You have already guessed this letter. Please guess another letter")
         letter_user = input("Enter a letter: ")
+
+# Check if the guessed letter is incorrect
     if letter_user not in letters_word:
         incorrect_guesses += 1
         wrong_letters.append(letter_user)
