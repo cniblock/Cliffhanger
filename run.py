@@ -102,3 +102,18 @@ while incorrect_guesses < incorrect_guesses_allowed:
             print("_ ", end="")
 
     print()
+
+# Check guess to see if incorrect and print Cliffhanger man
+    if incorrect_guesses:
+        print(cliffhanger_display[incorrect_guesses - 1])
+    print()
+    print(___________________________________________)
+
+    if len(letters_guessed) == len(letters_word):
+        print()
+        print("Contratulations! You won!")
+        break
+
+if incorrect_guesses == incorrect_guesses_allowed :
+    print()
+    print("You lost! Better luck next time!")
