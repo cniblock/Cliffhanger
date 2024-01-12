@@ -106,12 +106,12 @@ while incorrect_guesses < incorrect_guesses_allowed:
             print(cliffhanger_display[incorrect_guesses - 1])
         print()
         print("___________________________________________")
-
+        # Print game win
         if len(letters_guessed) == len(letters_word):
             print()
             print("Congratulations! You won!")
             break
-
+# Print loss of game
 if incorrect_guesses == incorrect_guesses_allowed:
     print()
     print("You lost! Better luck next time!")
