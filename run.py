@@ -66,5 +66,9 @@ while incorrect_guesses < incorrect_guesses_allowed:
     for letter in wrong_letters:
         print("{}, ".format(letter), end='')
     print()
-    print("Guesses remaining: {}".format(incorrect_guesses_allowed))
+    print("Guesses remaining: {}".format(incorrect_guesses_allowed - incorrect_guesses))
     letter_user = input("Enter a letter: ")
+    if len(letter_user) == 1 and letter_user.isalpha():
+        break
+    else:
+        print("Error. Please enter a letter.")
