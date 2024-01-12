@@ -1,3 +1,11 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# Commands to load ranndom word from words_library
+import random 
+from words import word_library
+
+# Function to get word from Library
+def get_word():
+    word = random.choice(word_library)
+    return word.lower()
+
+random_word = get_word()
+print(random_word)
