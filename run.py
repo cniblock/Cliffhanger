@@ -77,3 +77,9 @@ while incorrect_guesses < incorrect_guesses_allowed:
         print()
         print("You have already guessed this letter. Please guess another letter")
         letter_user = input("Enter a letter: ")
+    if letter_user not in letters_word:
+        incorrect_guesses += 1
+        wrong_letters.append(letter_user)
+
+    print()
+    print("Word: ", end="")
