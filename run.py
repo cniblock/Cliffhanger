@@ -1,4 +1,4 @@
-# Commands to load words from words_library
+# Commands to link words from words_library
 import random 
 from words import word_library
 
@@ -7,35 +7,23 @@ def get_word():
     word = random.choice(word_library)
     return word.lower()
 
-incorrect_guesses = 0
-letters_guessed = []
-incorrect_guesses_allowed = len(cliffhanger_display)
-word = random_word
-letters_word = word
-wrong_letters = []
-
-print()
-print("Welcome to the Cliffhanger word guessing game")
-print("The word has {} letters".format(len(letters_word)))
-
-
-# Function to show display of attempts
+# Stages of incorrect guesses
 cliffhanger_display = ["""
-             O
-            \|/
-            / \\
+           O
+          \|/
+          / \\
         ---------------------------¬
             """,
             """
-                   O
-                  \|/
-                  / \\
+                  O
+                 \|/
+                 / \\
         ---------------------------¬
             """,
             """
-                       O
-                      \|/
-                      / \\
+                      O
+                     \|/
+                     / \\
         ---------------------------¬
             """,
             """
@@ -51,14 +39,32 @@ cliffhanger_display = ["""
         ---------------------------¬
             """,
             """
-                                     \ O /    arrghh!!!
-                                       |
-                                      / \\
+                                       \ O /    arrghh!!!
+                                         |
+                                        / \\
         ---------------------------¬
             """,
     ]
 
-    for stage in stages:
-        print(stage)
+# Variables
+word = get_word() 
+incorrect_guesses = 0 
+letters_guessed = []
+incorrect_guesses_allowed = len(cliffhanger_display)
+letters_word = list(word)
+wrong_letters = []
 
-cliffhanger_display(1)
+# Initial print at start of the game
+print()
+print("Welcome to the Cliffhanger word guessing game\n")
+print("The word has {} letters\n".format(len(letters_word)))
+
+# While loop to check guesses / wrong guesses / ask for user input
+while incorrect_guesses < incorrect_guesses_allowed:
+    print()
+    print("Incorrect letters guessed: ", end='')
+    for letter in wrong_letters:
+        print("{}, ".format(letter), end='')
+    print()
+    print("Guesses remaining: {}".format(incorrect_guesses_allowed))
+    letter_user = input("Enter a letter: ")
