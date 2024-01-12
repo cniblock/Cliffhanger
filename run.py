@@ -1,18 +1,26 @@
-# Commands to load ranndom word from words_library
+# Commands to load words from words_library
 import random 
 from words import word_library
 
-# Function to get word from Library
+# Function to get random word from Library
 def get_word():
     word = random.choice(word_library)
     return word.lower()
 
-random_word = get_word()
-print(random_word)
+incorrect_guesses = 0
+letters_guessed = []
+incorrect_guesses_allowed = len(cliffhanger_display)
+word = random_word
+letters_word = word
+wrong_letters = []
+
+print()
+print("Welcome to the Cliffhanger word guessing game")
+print("The word has {} letters".format(len(letters_word)))
+
 
 # Function to show display of attempts
-def cliffhanger_display(attempts):
-    stages = ["""
+cliffhanger_display = ["""
              O
             \|/
             / \\
