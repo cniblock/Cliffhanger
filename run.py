@@ -128,26 +128,26 @@ if incorrect_guesses == incorrect_guesses_allowed:
     print(" The correct word was: {} \n".format(word))
 
 # Loop for playing again
-while True:
-    play_again = input("Do you want to play again? (y/n): ").lower()
+    while True:
+        play_again = input("Do you want to play again? (y/n): ").lower()
     
-    if play_again != 'y':
-        print("Thanks for playing. Goodbye!")
-        break  
+        if play_again != 'y':
+         print("Thanks for playing. Goodbye!")
+         break  
     
     # Reset game variables and start a new game
-    word = get_word()
-    incorrect_guesses = 0
-    letters_guessed = []
-    wrong_letters = []
+         word = get_word()
+         incorrect_guesses = 0
+         letters_guessed = []
+         wrong_letters = []
 
-    print("\nWelcome to the Cliffhanger word guessing game\n")
-    print("The word has {} letters\n".format(len(word)))
+         print("\nWelcome to the Cliffhanger word guessing game\n")
+         print("The word has {} letters\n".format(len(word)))
 
     # While loop to check guesses / wrong guesses / ask for user input
-    while incorrect_guesses < incorrect_guesses_allowed:
+         while incorrect_guesses < incorrect_guesses_allowed:
 
-    if incorrect_guesses == incorrect_guesses_allowed:
-        print()
-        print("You lost! Better luck next time!")
-        print("The correct word was: {} \n".format(word))
+            if incorrect_guesses == incorrect_guesses_allowed:
+                 print()
+                 print("You lost! Better luck next time!")
+                 print("The correct word was: {} \n".format(word))
