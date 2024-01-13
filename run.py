@@ -118,7 +118,7 @@ while play == True:
             if len(letters_guessed) == len(letters_word):
                 print()
                 print(" CONGRATULATIONS! You won!")
-                play_again = input(" Would you like to play again? (y/n) ").lower()
+                play_again = input(" Would you like to play again? (y/n) ").lower()  # Use .lower() here
                 if play_again == "n":
                     print(" Thanks for playing")
                     play = False
@@ -130,11 +130,11 @@ while play == True:
                     letters_word = list(word)
                     wrong_letters = []
     # Print loss of game
-    if incorrect_guesses == incorrect_guesses_allowed:
-        print()
-        print(" You lost! Better luck next time!")
-        print(" The correct word was: {} \n".format(word))
-        play_again = input(" Would you like to play again? (y/n) ").lower()
-        if play_again == "y":
+            if incorrect_guesses == incorrect_guesses_allowed:
+                print()
+                print(" You lost! Better luck next time!")
+                play_again = input(" Would you like to play again? (y/n) ").lower()  # Use .lower() here
+                if play_again == "y":
                     print(" Thanks for playing")
                     play = False
+                
