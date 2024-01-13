@@ -134,7 +134,7 @@ while play == True:
                 print()
                 print(" You lost! Better luck next time!")
                 play_again = input(" Would you like to play again? (y/n) ").lower()  # Use .lower() here
-                if play_again == "y":
+                if play_again == "n":
                     print(" Thanks for playing")
                     play = False
                 
