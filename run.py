@@ -114,7 +114,6 @@ while play == True:
             # Check guess to see if incorrect and print Cliffhanger man
             if incorrect_guesses:
                 print(cliffhanger_display[incorrect_guesses - 1])
-            print("___________________________________________")
             # Print game win
             if len(letters_guessed) == len(letters_word):
                 print()
