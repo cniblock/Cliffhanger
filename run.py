@@ -95,7 +95,7 @@ while incorrect_guesses < incorrect_guesses_allowed:
             wrong_letters.append(letter_user)
 
         # Update the guessed letters
-        letters_guessed.append(letter_user)
+        # letters_guessed.append(letter_user)
 
         print()
         print("Word: ", end="")
