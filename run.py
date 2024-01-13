@@ -126,5 +126,5 @@ while incorrect_guesses < incorrect_guesses_allowed:
 # Print loss of game
 if incorrect_guesses == incorrect_guesses_allowed:
     print()
-    print("You lost! Better luck next time!")S
+    print("You lost! Better luck next time!")
     print("The correct word was: {}".format(word))
