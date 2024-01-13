@@ -9,49 +9,49 @@ def get_word():
 
 # Stages of incorrect guesses
 cliffhanger_display = ["""
-           O
+           O     You got this!
           \\|/
           / \\
         ---------------------------¬
             """,
              """
-                O
+                O     It's ok!
                \\|/
                / \\
         ---------------------------¬
             """,
             """
-                   O
+                   O     I believe in you!
                   \\|/
                   / \\
         ---------------------------¬
             """,
             """
-                      O
+                      O     you can do it!
                      \\|/
                      / \\
         ---------------------------¬
             """,
             """
-                           O
+                           O     oh dear!
                           \\|/
                           / \\
         ---------------------------¬
             """,
             """
-                              O
+                              O     I can see the edge!
                              \\|/
                              / \\
         ---------------------------¬
             """,
             """
-                                  O
+                                  O     oh no!
                                  \\|/
                                  / \\
         ---------------------------¬
             """,
             """
-                                       \\ O /    arrghh!!!
+                                       \\ O /     arrghh!!!
                                          |
                                         / \\
         ---------------------------¬
@@ -126,5 +126,5 @@ while incorrect_guesses < incorrect_guesses_allowed:
 # Print loss of game
 if incorrect_guesses == incorrect_guesses_allowed:
     print()
-    print("You lost! Better luck next time!")
+    print("You lost! Better luck next time!")S
     print("The correct word was: {}".format(word))
