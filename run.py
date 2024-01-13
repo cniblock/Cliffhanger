@@ -79,7 +79,7 @@ while play == True:
             print("{}, ".format(letter), end='')
         print()
         print(" Guesses remaining: {}".format(incorrect_guesses_allowed - incorrect_guesses))
-        letter_user = input(" Enter a letter: ")
+        letter_user = input(" Enter a letter: ").upper()
 
         # Validate user input
         if len(letter_user) == 1 and letter_user.isalpha():
@@ -94,7 +94,7 @@ while play == True:
                 incorrect_guesses += 1
                 wrong_letters.append(letter_user)
 
-            # Update the guessed letters
+            # Show correctly guessed letters
             print()
             print(" Word: ", end="")
 
