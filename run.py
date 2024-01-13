@@ -58,22 +58,21 @@ cliffhanger_display = ["""
         ---------------------------¬
             """,
     ]
-
-# Variables
-word = get_word() 
-incorrect_guesses = 0 
-letters_guessed = []
-incorrect_guesses_allowed = len(cliffhanger_display)
-letters_word = list(word)
-wrong_letters = []
-
-# Initial print at the start of the game
-print()
-print(" Welcome to the Cliffhanger word guessing game\n")
-print(" The word has {} letters\n".format(len(letters_word)))
-
 while play == True:
-# While loop to check guesses / wrong guesses / ask for user input
+    # Variables
+    word = get_word() 
+    incorrect_guesses = 0 
+    letters_guessed = []
+    incorrect_guesses_allowed = len(cliffhanger_display)
+    letters_word = list(word)
+    wrong_letters = []
+
+    # Initial print at the start of the game
+    print()
+    print(" Welcome to the Cliffhanger word guessing game\n")
+    print(" The word has {} letters\n".format(len(letters_word)))
+
+    # While loop to check guesses / wrong guesses / ask for user input
     while incorrect_guesses < incorrect_guesses_allowed:
         print()
         print(" Incorrect letters guessed: ", end='')
@@ -122,9 +121,9 @@ while play == True:
             if len(letters_guessed) == len(letters_word):
                 print()
                 print(" CONGRATULATIONS! You won!")
-                play_again = input("Would you like to play again? (y/n) ").upper()
+                play_again = input(" Would you like to play again? (y/n) ").upper()
                 if play_again == "N":
-                    print("Thanks for playing")
+                    print(" Thanks for playing")
                     play = False
                 elif play_again == "Y":
                     word = get_word() 
@@ -138,7 +137,7 @@ while play == True:
         print()
         print(" You lost! Better luck next time!")
         print(" The correct word was: {} \n".format(word))
-        play_again = input("Would you like to play again? (y/n) ").upper()
+        play_again = input(" Would you like to play again? (y/n) ").upper()
         if play_again == "N":
-                    print("Thanks for playing")
+                    print(" Thanks for playing")
                     play = False
