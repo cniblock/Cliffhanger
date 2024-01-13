@@ -3,62 +3,63 @@ import random
 from words import word_library
 play = True
 
-# Function to get random word from Library
-def get_word():
-    word = random.choice(word_library)
-    return word.lower()
-
-# Stages of incorrect guesses
-cliffhanger_display = ["""
-           O     You got this!
-          \\|/
-          / \\
-        ---------------------------¬
-            """,
-             """
-                O     It's ok!
-               \\|/
-               / \\
-        ---------------------------¬
-            """,
-            """
-                   O     I believe in you!
-                  \\|/
-                  / \\
-        ---------------------------¬
-            """,
-            """
-                      O     you can do it!
-                     \\|/
-                     / \\
-        ---------------------------¬
-            """,
-            """
-                           O     oh dear!
-                          \\|/
-                          / \\
-        ---------------------------¬
-            """,
-            """
-                              O     I can see the edge!
-                             \\|/
-                             / \\
-        ---------------------------¬
-            """,
-            """
-                                  O     oh no!
-                                 \\|/
-                                 / \\
-        ---------------------------¬
-            """,
-            """
-                                       \\ O /     arrghh!!!
-                                         |
-                                        / \\
-        ---------------------------¬
-            """,
-    ]
 while play == True:
+    # Function to get random word from Library
+    def get_word():
+        word = random.choice(word_library)
+        return word.lower()
+
+    # Stages of incorrect guesses
+    cliffhanger_display = ["""
+            O     You got this!
+            \\|/
+            / \\
+            ---------------------------¬
+                """,
+                """
+                    O     It's ok!
+                \\|/
+                / \\
+            ---------------------------¬
+                """,
+                """
+                    O     I believe in you!
+                    \\|/
+                    / \\
+            ---------------------------¬
+                """,
+                """
+                        O     you can do it!
+                        \\|/
+                        / \\
+            ---------------------------¬
+                """,
+                """
+                            O     oh dear!
+                            \\|/
+                            / \\
+            ---------------------------¬
+                """,
+                """
+                                O     I can see the edge!
+                                \\|/
+                                / \\
+            ---------------------------¬
+                """,
+                """
+                                    O     oh no!
+                                    \\|/
+                                    / \\
+            ---------------------------¬
+                """,
+                """
+                                        \\ O /     arrghh!!!
+                                            |
+                                            / \\
+            ---------------------------¬
+                """,
+        ]
+
     # Variables
     word = get_word() 
     incorrect_guesses = 0 
