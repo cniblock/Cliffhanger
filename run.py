@@ -11,19 +11,19 @@ while play == True:
 
     # Stages of incorrect guesses
     cliffhanger_display = ["""
-            O     You got this!
+             O     You got this!
             \\|/
             / \\
             ---------------------------¬
                 """,
                 """
-                    O     It's ok!
+                 O     It's ok!
                 \\|/
                 / \\
             ---------------------------¬
                 """,
                 """
-                    O     I believe in you!
+                     O     I believe in you!
                     \\|/
                     / \\
             ---------------------------¬
@@ -35,25 +35,25 @@ while play == True:
             ---------------------------¬
                 """,
                 """
-                            O     oh dear!
+                             O     oh dear!
                             \\|/
                             / \\
             ---------------------------¬
                 """,
                 """
-                                O     I can see the edge!
+                                 O     I can see the edge!
                                 \\|/
                                 / \\
             ---------------------------¬
                 """,
                 """
-                                    O     oh no!
+                                     O     oh no!
                                     \\|/
                                     / \\
             ---------------------------¬
                 """,
                 """
-                                        \\ O /     arrghh!!!
+                                         \\ O /     arrghh!!!
                                             |
                                             / \\
             ---------------------------¬
