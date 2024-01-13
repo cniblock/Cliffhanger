@@ -118,7 +118,7 @@ while play == True:
             if len(letters_guessed) == len(letters_word):
                 print()
                 print(" CONGRATULATIONS! You won!")
-                play_again = input(" Would you like to play again? (y/n) ").upper()
+                play_again = input(" Would you like to play again? (y/n) ").lower()
                 if play_again == "n":
                     print(" Thanks for playing")
                     play = False
@@ -134,7 +134,7 @@ while play == True:
         print()
         print(" You lost! Better luck next time!")
         print(" The correct word was: {} \n".format(word))
-        play_again = input(" Would you like to play again? (y/n) ").upper()
+        play_again = input(" Would you like to play again? (y/n) ").lower()
         if play_again == "y":
                     print(" Thanks for playing")
                     play = False
