@@ -69,12 +69,11 @@ while play == True:
 
     # Initial print at the start of the game
     print()
-    print(" Welcome to the Cliffhanger word guessing game\n")
+    print(" Welcome to the CLIFFHANGER word guessing game\n")
     print(" The word has {} letters\n".format(len(letters_word)))
 
     # While loop to check guesses / wrong guesses / ask for user input
     while incorrect_guesses < incorrect_guesses_allowed:
-        print()
         print(" Incorrect letters guessed: ", end='')
         for letter in wrong_letters:
             print("{}, ".format(letter), end='')
@@ -115,7 +114,6 @@ while play == True:
             # Check guess to see if incorrect and print Cliffhanger man
             if incorrect_guesses:
                 print(cliffhanger_display[incorrect_guesses - 1])
-            print()
             print("___________________________________________")
             # Print game win
             if len(letters_guessed) == len(letters_word):
