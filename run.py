@@ -68,7 +68,7 @@ wrong_letters = []
 
 # Initial print at the start of the game
 print()
-print( "Welcome to the Cliffhanger word guessing game\n")
+print(" Welcome to the Cliffhanger word guessing game\n")
 print(" The word has {} letters\n".format(len(letters_word)))
 
 # While loop to check guesses / wrong guesses / ask for user input
@@ -95,8 +95,6 @@ while incorrect_guesses < incorrect_guesses_allowed:
             wrong_letters.append(letter_user)
 
         # Update the guessed letters
-        # letters_guessed.append(letter_user)
-
         print()
         print(" Word: ", end="")
 
@@ -128,17 +126,4 @@ if incorrect_guesses == incorrect_guesses_allowed:
     print()
     print(" You lost! Better luck next time!")
     print(" The correct word was: {} \n".format(word))
-    play_again = input("Do you want to play again? (y/n): ").lower()
-
-    if play_again == 'y':
-        # Reset game variables and start a new game
-        word = get_word()
-        incorrect_guesses = 0
-        letters_guessed = []
-        wrong_letters = []
-
-        print("\nWelcome to the Cliffhanger word guessing game\n")
-        print("The word has {} letters\n".format(len(word)))
-    else:
-        print("Thanks for playing. Goodbye!")
         
