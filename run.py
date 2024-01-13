@@ -60,7 +60,7 @@ cliffhanger_display = ["""
     ]
 while play == True:
     # Variables
-    word = get_word.upper() 
+    word = get_word() 
     incorrect_guesses = 0 
     letters_guessed = []
     incorrect_guesses_allowed = len(cliffhanger_display)
@@ -79,7 +79,7 @@ while play == True:
             print("{}, ".format(letter), end='')
         print()
         print(" Guesses remaining: {}".format(incorrect_guesses_allowed - incorrect_guesses))
-        letter_user = input(" Enter a letter: ").upper()
+        letter_user = input(" Enter a letter: ").lower()
 
         # Validate user input
         if len(letter_user) == 1 and letter_user.isalpha():
@@ -118,7 +118,7 @@ while play == True:
             if len(letters_guessed) == len(letters_word):
                 print()
                 print(" CONGRATULATIONS! You won!")
-                play_again = input(" Would you like to play again? (y/n) ").upper()
+                play_again = input(" Would you like to play again? (y/n) ").lower()
                 if play_again == "N":
                     print(" Thanks for playing")
                     play = False
@@ -134,7 +134,7 @@ while play == True:
         print()
         print(" You lost! Better luck next time!")
         print(" The correct word was: {} \n".format(word))
-        play_again = input(" Would you like to play again? (y/n) ").upper()
+        play_again = input(" Would you like to play again? (y/n) ").lower()
         if play_again == "N":
                     print(" Thanks for playing")
                     play = False
