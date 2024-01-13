@@ -135,6 +135,7 @@ while play == True:
             if incorrect_guesses == incorrect_guesses_allowed:
                 print()
                 print(" You lost! Better luck next time!")
+                print(" The correct word was: {} \n".format(word))
                 play_again = input(" Would you like to play again? (y/n) ").lower()
                 print() 
                 if play_again == "n":
