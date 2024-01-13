@@ -60,7 +60,7 @@ cliffhanger_display = ["""
     ]
 while play == True:
     # Variables
-    word = get_word() 
+    word = get_word.upper() 
     incorrect_guesses = 0 
     letters_guessed = []
     incorrect_guesses_allowed = len(cliffhanger_display)
