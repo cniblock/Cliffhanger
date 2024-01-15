@@ -10,6 +10,8 @@ There is a vast library of words the program has access to, which gives the play
 
 [View the live version of the game here. Enjoy!](https://cliff-hanger-69cb06fcdcfe.herokuapp.com/)
 
+![Screenshot of responsive website](images/readme_6.jpg)
+
 ## How to play
 
 If you are familiar with the word guessing game "Hangman" then you will get the gist of Cliffhanger.
@@ -72,6 +74,8 @@ Game progress is stored and shown to the player.
 
 Upon game outcome, the game loop is either restarted or exited depending on user input.
 
+![Screenshot of Flowchart](images/flowchart.jpg)
+
 ## Testing
 
 The game has been consitantly tested throughout the projects development.
@@ -89,7 +93,7 @@ The game has been consitantly tested throughout the projects development.
 
 #### Remaining Bugs
 
-- Inconsistancy in uppercase input. Some uppercase letters are accepted but not all. 
+- Inconsistancy in uppercase input. Some uppercase letters are acce pted bu not all. 
 
 ### Validator Testing
 
