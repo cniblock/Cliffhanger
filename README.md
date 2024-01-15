@@ -80,7 +80,7 @@ Upon game outcome, the game loop is either restarted or exited depending on user
 
 #### Remaining Bugs
 
-Inconsistancy in uppercase input. Some uppercase letters are excepted but not all. 
+Inconsistancy in uppercase input. Some uppercase letters are accepted but not all. 
 
 ### Validator Testing
 
