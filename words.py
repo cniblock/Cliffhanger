@@ -1,7 +1,7 @@
 word_library = [
     'alien', 'algorithm', 'albatross', 'analytics', 'antelope', 'apple', 'astronaut', 'asteroid', 'backend', 'banana',
     'biometrics', 'biotechnology', 'binary', 'blockchain', 'butterfly', 'campaign', 'candidate', 'celestial',
-    'chemistry', 'cherry', 'cloud', 'coding', 'comet', 'compiler', 'constellation', 'constitution', 'cosmic',
+    'chemistry', 'cherry', 'cliffhanger', 'cloud', 'coding', 'comet', 'compiler', 'constellation', 'constitution', 'cosmic',
     'cosmonaut', 'cybersecurity', 'database', 'daisy', 'dandelion', 'democracy', 'debugging', 'dolphin', 'digital',
     'earth', 'ecology', 'ecosystem', 'election', 'element', 'elephant', 'encryption', 'environment', 'evolution', 'experiment',
     'extraterrestrial', 'fauna', 'feline', 'flamingo', 'flora', 'forest', 'frontend', 'framework', 'football', 'galaxy', 'gadget',
