@@ -1,31 +1,68 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# CliffHanger - Word Guessing Game
 
-Welcome USER_NAME,
+CliffHanger is a text based Python terminal game. The program runs in Code Institutes mock terminal on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+CliffHanger is a new take on the popular Hangman game. The users incorrect guesses move the CLiffhanger stick-man closer to the edge of a cliff, with the Stickman taking an unlucky tumble is the user uses up all their attempts at guessing the word.
 
-## Reminders
+There is a vast library of words the program has access to, which gives the User a real challenge in solving. Over 170 words!!!
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+View the live version of the game here. Enjoy! (LINK)
 
-## Creating the Heroku app
+![Responsive Website]()
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## How to play
 
-1. `heroku/python`
-2. `heroku/nodejs`
+If you are familiar with the word guessing game "Hangman" then you will get the gist of Cliffhanger.
+If you have never played Hangman, please view the rules and concept of the game here.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+When the game begins you will ne informed of how many letters the word you need to guess contains.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+You will then be asked to input a letter.
 
-Connect your GitHub repository and deploy as normal.
+Upon the letter you input being correct, your correctly guessed letter will be shown and also at at point in the word your letter belongs.
 
-## Constraints
+If you guess an incorrect letter, the CliffHanger stick-man will move along the play area and your incorrect guess will be logged.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+If you guess too many incorrect letters, the CliffHanger man will take tumble off the cliff.
 
------
-Happy coding!
+On guessing the correct word, congratulations, you will be informed you have won the game.
+
+After winning or losing you will be asked if you want to play the game again.
+
+If you select "y" the game will start over and you can play a new game.
+
+If you select "n" you will be shown a message "Thanks for playing" and the game will end.
+
+## Features
+
+### Current Features
+
+Words are selected from a large library, over 170 word options!
+
+Player is shown how many letters are in the word they need to guess.
+
+Correctly guessed letters are show on the word being guessed.
+
+Incorrect letters are stored and shown to the player, remaining amount of guesses allowed also shown to player.
+
+Input guesses are validated, if the player has already guessed the letter, they will be informed and asked to guess again.
+
+Upon reach the end of the game. After either a win or loss. The player will be asked if they want to play again. 
+If the player want to play again, the game will start again. 
+If the player doesn't want to play again the game will exit with a message, "Thanks for playing".
+
+## Data Model
+
+## testing
+
+### Bugs
+
+#### Solved Bugs
+
+#### Remaining Bugs
+
+### Validator Testing
+
+## Deployment
+
+## Credits

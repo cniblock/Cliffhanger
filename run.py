@@ -111,7 +111,7 @@ while play == True:
                     print("_ ", end="")
             print()
 
-            # Check guess to see if incorrect and print Cliffhanger man
+            # Print Cliffhanger man if incorrect guess
             if incorrect_guesses:
                 print(cliffhanger_display[incorrect_guesses - 1])
 
