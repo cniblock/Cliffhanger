@@ -13,7 +13,7 @@ There is a vast library of words the program has access to, which gives the play
 ## How to play
 
 If you are familiar with the word guessing game "Hangman" then you will get the gist of Cliffhanger.
-If you have never played Hangman, please view the rules and concept of the game here.
+If you have never played Hangman, please view the [rules and concept of the game here](https://en.wikipedia.org/wiki/Hangman_(game)#:~:text=Hangman%20is%20a%20guessing%20game,there%20are%20now%20electronic%20versions.).
 
 When the game begins you will be informed of how many letters the word you need to guess contains.
 
@@ -23,7 +23,7 @@ Upon the letter you input being correct, your correctly guessed letter will be s
 
 If you guess an incorrect letter, the CliffHanger stick-man will move along the play area and your incorrect guess will be logged.
 
-If you guess too many incorrect letters, the CliffHanger man will take tumble off the cliff.
+If you guess too many incorrect letters, the CliffHanger man will take tumble off the cliff and you lose the game.
 
 On guessing the correct word, congratulations, you will be informed you have won the game.
 
@@ -37,9 +37,9 @@ If you select "n" you will be shown a message "Thanks for playing" and the game 
 
 ### Current Features
 
-- Words are selected from a large library, over 170 word options!
+- Words are randomly selected from a large library, over 170 word options!
 
-- Player is shown how many letters are in the word they need to guess.
+- The player is shown how many letters are in the word they need to guess.
 
 - Correctly guessed letters are show on the word being guessed.
 
@@ -47,11 +47,11 @@ If you select "n" you will be shown a message "Thanks for playing" and the game 
 
 - Input guesses are validated, if the player has already guessed the letter, they will be informed and asked to guess again.
 
-- Upon reach the end of the game. After either a win or loss. The player will be asked if they want to play again. 
+- Upon reaching the end of the game - after either a win or loss. The player will be asked if they want to play again. 
 - If the player want to play again, the game will start again. 
 - If the player doesn't want to play again the game will exit with a message, "Thanks for playing".
 
-### Furtue Feature
+### Furtue Features
 
 Allow the play to select the difficulty of the game. 
 With this suggestion:
@@ -63,7 +63,7 @@ With this suggestion:
 
 The game harnesses the "random" module to select a word at random.
 
-The words are stored in a library which are in their on .py file. This is to keep that data free from cluttering the main code and prevent the risk of misakes being made on main code if library is editied.
+The words are stored in a library which are in their own .py file. This is to keep that data free from cluttering the main code and prevent the risk of misakes being made on main code if library is editied.
 
 Visual reprisentation of an incorrect guess is used by having the stick-man shown and also have it move along the play area with each bad guess.
 This is done by an if statement that prints the cliffhanger_display(+1) with each incorrect guess.
@@ -77,7 +77,7 @@ Upon game outcome, the game loop is either restarted or exited depending on user
 The game has been consitantly tested throughout the projects development.
 
 - The code has been passed through PEP8, the application is showing errors for multiple trailing backslashes, where there are none.
-- PEP8 also showing errors for the double "//" for stickmans arms or legs, although the code works fine in Heroku terminal.
+- PEP8 is also showing errors for the double "//" for the stickmans arms or legs, although the code works fine in Heroku terminal.
 - Testing has been conducted numerous times and final commit comtains no major bugs.
 
 ### Bugs
