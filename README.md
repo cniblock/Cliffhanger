@@ -72,7 +72,7 @@ If you select "n" you will be shown a message "Thanks for playing" and the game 
 
 ### Future Features
 
-Allow the play to select the difficulty of the game. 
+Allow the player to select the difficulty of the game. 
 With this suggestion:
 - 6 attempt - Hard
 - 8 attempts - Medium (current format)
