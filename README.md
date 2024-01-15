@@ -116,7 +116,7 @@ The game has been consitantly tested throughout the projects development.
 
 ![Screenshot of error uppercase](images/test8.jpg)
 
-- Any letter input when asked play again will be accepted as a yes "y". No "n" is currently working correctly, however.
+- Any letter input when asked play again (with the exception of n) will be accepted as a yes "y". No "n" is currently working correctly, however.
 
 ![Screenshot of error uppercase](images/test9.jpg)
 
