@@ -97,11 +97,11 @@ Upon game outcome, the game loop is either restarted or exited depending on user
 
 ## Testing
 
-The game has been consitantly tested throughout the projects development.
+The game has been consistantly tested throughout the projects development.
 
 - The code has been passed through PEP8, the application is showing errors for multiple trailing backslashes, where there are none.
 - PEP8 is also showing errors for the double "//" for the stickmans arms or legs, although the code works fine in Heroku terminal.
-- Testing has been conducted numerous times and final commit comtains no major bugs.
+- Testing has been conducted numerous times and final commit contains no major bugs.
 
 ### Bugs
 
@@ -112,7 +112,7 @@ The game has been consitantly tested throughout the projects development.
 
 #### Remaining Bugs
 
-- Inconsistancy in uppercase input. Some uppercase letters are acce pted bu not all. 
+- Inconsistancy in uppercase input. Some uppercase letters are accepted but not all. 
 
 ![Screenshot of error uppercase](images/test8.jpg)
 
