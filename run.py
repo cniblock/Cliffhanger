@@ -109,12 +109,12 @@ while play == True:
                     print(letter + " ", end="")
                 else:
                     print("_ ", end="")
-
             print()
 
             # Check guess to see if incorrect and print Cliffhanger man
             if incorrect_guesses:
                 print(cliffhanger_display[incorrect_guesses - 1])
+
             # Print game win
             if len(letters_guessed) == len(letters_word):
                 print()
@@ -122,19 +122,20 @@ while play == True:
                 play_again = input(" Would you like to play again? (y/n) ").lower()
                 print() 
                 if play_again == "n":
-                    print("Thanks for playing")
+                    print(" Thanks for playing")
                     play = False
                 elif play_again == "y":
                     break
+
     # Print loss of game
         if incorrect_guesses == incorrect_guesses_allowed:
             print()
-            print("You lost! Better luck next time!")
-            print("The correct word was: {} \n".format(word))
-            play_again = input("Would you like to play again? (y/n) ").lower()
+            print(" You lost! Better luck next time!")
+            print(" The correct word was: {} \n".format(word))
+            play_again = input(" Would you like to play again? (y/n) ").lower()
             print()
             if play_again == "n":
-                print("Thanks for playing")
+                print(" Thanks for playing")
                 play = False
             elif play_again == "y":
                 break
