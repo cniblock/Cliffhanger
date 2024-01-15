@@ -2,11 +2,13 @@
 
 CliffHanger is a text based Python terminal game. The program runs in Code Institutes mock terminal on Heroku.
 
-CliffHanger is a new take on the popular Hangman game. The players incorrect guesses move the Cliffhanger stick-man closer to the edge of a cliff, with the Stickman taking an unlucky tumble if the player uses up all their attempts at guessing the word.
+CliffHanger is a new take on the popular Hangman game. 
+
+The players incorrect guesses move the Cliffhanger stick-man closer to the edge of a cliff, with the Stickman taking an unlucky tumble if the player uses up all their attempts at guessing the word.
 
 There is a vast library of words the program has access to, which gives the player a real challenge in solving. Over 170 words!!!
 
-View the live version of the game here. Enjoy! (LINK)
+[View the live version of the game here. Enjoy!](https://cliff-hanger-69cb06fcdcfe.herokuapp.com/)
 
 ![Responsive Website]()
 
@@ -37,27 +39,27 @@ If you select "n" you will be shown a message "Thanks for playing" and the game 
 
 ### Current Features
 
-Words are selected from a large library, over 170 word options!
+- Words are selected from a large library, over 170 word options!
 
-Player is shown how many letters are in the word they need to guess.
+- Player is shown how many letters are in the word they need to guess.
 
-Correctly guessed letters are show on the word being guessed.
+- Correctly guessed letters are show on the word being guessed.
 
-Incorrect letters are stored and shown to the player, remaining amount of guesses allowed also shown to player.
+- Incorrect letters are stored and shown to the player, remaining amount of guesses allowed also shown to player.
 
-Input guesses are validated, if the player has already guessed the letter, they will be informed and asked to guess again.
+- Input guesses are validated, if the player has already guessed the letter, they will be informed and asked to guess again.
 
-Upon reach the end of the game. After either a win or loss. The player will be asked if they want to play again. 
-If the player want to play again, the game will start again. 
-If the player doesn't want to play again the game will exit with a message, "Thanks for playing".
+- Upon reach the end of the game. After either a win or loss. The player will be asked if they want to play again. 
+- If the player want to play again, the game will start again. 
+- If the player doesn't want to play again the game will exit with a message, "Thanks for playing".
 
 ### Furtue Feature
 
 Allow the play to select the difficulty of the game. 
 With this suggestion:
-6 attempt - Hard
-8 attempts - Medium (current format)
-10 attempts - Easy
+- 6 attempt - Hard
+- 8 attempts - Medium (current format)
+- 10 attempts - Easy
 
 ## Data Model
 
@@ -76,11 +78,11 @@ Upon game outcome, the game loop is either restarted or exited depending on user
 
 ### Bugs
 
-#### Solved Bugs
+- #### Solved Bugs
 
-#### Remaining Bugs
+- #### Remaining Bugs
 
-Inconsistancy in uppercase input. Some uppercase letters are accepted but not all. 
+- Inconsistancy in uppercase input. Some uppercase letters are accepted but not all. 
 
 ### Validator Testing
 
