@@ -10,8 +10,6 @@ There is a vast library of words the program has access to, which gives the play
 
 [View the live version of the game here. Enjoy!](https://cliff-hanger-69cb06fcdcfe.herokuapp.com/)
 
-![Responsive Website]()
-
 ## How to play
 
 If you are familiar with the word guessing game "Hangman" then you will get the gist of Cliffhanger.
@@ -76,16 +74,40 @@ Upon game outcome, the game loop is either restarted or exited depending on user
 
 ## Testing
 
+The game has been consitantly tested throughout the projects development.
+
+- The code has been passed through PEP8, the application is showing errors for multiple trailing backslashes, where there are none.
+- PEP8 also showing errors for the double "//" for stickmans arms or legs, although the code works fine in Heroku terminal.
+- Testing has been conducted numerous times and final commit comtains no major bugs.
+
 ### Bugs
 
-- #### Solved Bugs
+#### Solved Bugs
 
-- #### Remaining Bugs
+- Error corrected due to " / " on stickman. This was resolved by adding an additional "/" 
+- Exit loop after win and player not wanting to play again. Fixed by adding break under that specific if condition.
+
+#### Remaining Bugs
 
 - Inconsistancy in uppercase input. Some uppercase letters are accepted but not all. 
 
 ### Validator Testing
 
+- PEP8 has been used for testing - errors are stated, however the code works in the Heroku terminal.
+
 ## Deployment
+
+Codeanywhere was used to develop the game.
+GitHub used to deposit to repository.
+Heroku is used to display game code in terminal.
+
+- Steps used to deploy on Heroku
+    - Heroku account set up.
+    - New App created on Heroku.
+    - Buildpacks for python and NodeJS added to app.
+    - GitHub linked to Heroku account.
+    - Specific GitHub repository selected.
+    - Deploy branch to load code into Huroku app.
+    - Uploaded repository then viewed.
 
 ## Credits
