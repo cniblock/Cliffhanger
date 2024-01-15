@@ -1,4 +1,4 @@
-# Commands to link words from words_library
+# Commands for random module and to link words from words_library 
 import random 
 from words import word_library
 play = True
