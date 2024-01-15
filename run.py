@@ -124,6 +124,7 @@ while play == True:
                 if play_again == "n":
                     print(" Thanks for playing")
                     play = False
+                    break
                 elif play_again == "y":
                     break
 
