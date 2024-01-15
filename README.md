@@ -1,5 +1,7 @@
 # CliffHanger - Word Guessing Game
 
+![Screenshot of banner](images/banner.jpg)
+
 CliffHanger is a text based Python terminal game. The program runs in Code Institutes mock terminal on Heroku.
 
 CliffHanger is a new take on the popular Hangman game. 
@@ -43,15 +45,28 @@ If you select "n" you will be shown a message "Thanks for playing" and the game 
 
 - The player is shown how many letters are in the word they need to guess.
 
+![Screenshot of initial game start](images/readme_1.jpg)
+
 - Correctly guessed letters are show on the word being guessed.
+
+![Screenshot of correct guesses](images/readme_9.jpg)
 
 - Incorrect letters are stored and shown to the player, remaining amount of guesses allowed also shown to player.
 
+![Screenshot of incorrect guesses](images/readme_2.jpg)
+
 - Input guesses are validated, if the player has already guessed the letter, they will be informed and asked to guess again.
+
+![Screenshot of already guessed letter](images/readme_4.jpg)
 
 - Upon reaching the end of the game - after either a win or loss. The player will be asked if they want to play again. 
 - If the player want to play again, the game will start again. 
+
+![Screenshot of yes to play again](images/readme_8.jpg)
+
 - If the player doesn't want to play again the game will exit with a message, "Thanks for playing".
+
+![Screenshot of no to play again](images/readme_7.jpg)
 
 ### Furtue Features
 
@@ -74,6 +89,8 @@ Game progress is stored and shown to the player.
 
 Upon game outcome, the game loop is either restarted or exited depending on user input.
 
+#### Logic Flowchart
+
 ![Screenshot of Flowchart](images/flowchart.jpg)
 
 ## Testing
@@ -94,6 +111,8 @@ The game has been consitantly tested throughout the projects development.
 #### Remaining Bugs
 
 - Inconsistancy in uppercase input. Some uppercase letters are acce pted bu not all. 
+
+![Screenshot of error uppercase](images/test8.jpg)
 
 ### Validator Testing
 
