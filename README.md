@@ -78,6 +78,8 @@ With this suggestion:
 - 8 attempts - Medium (current format)
 - 10 attempts - Easy
 
+Allow the player to add words of their own to the library.
+
 ## Data Model
 
 The game harnesses the "random" module to select a word at random.
