@@ -6,6 +6,8 @@ CliffHanger is a text based Python terminal game. The program runs in Code Insti
 
 CliffHanger is a new take on the popular Hangman game. 
 
+The players aim is to guess a word with only the amount of letters in that word being known to them.
+
 The players incorrect guesses move the Cliffhanger stick-man closer to the edge of a cliff, with the Stickman taking an unlucky tumble if the player uses up all their attempts at guessing the word.
 
 There is a vast library of words the program has access to, which gives the player a real challenge in solving. Over 170 words!!!
@@ -113,6 +115,10 @@ The game has been consitantly tested throughout the projects development.
 - Inconsistancy in uppercase input. Some uppercase letters are acce pted bu not all. 
 
 ![Screenshot of error uppercase](images/test8.jpg)
+
+- Any letter input when asked play again will be accepted as a yes "y". No "n" is currently working correctly, however.
+
+![Screenshot of error uppercase](images/test9.jpg)
 
 ### Validator Testing
 
