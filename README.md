@@ -70,7 +70,7 @@ If you select "n" you will be shown a message "Thanks for playing" and the game 
 
 ![Screenshot of no to play again](images/readme_7.jpg)
 
-### Furture Features
+### Future Features
 
 Allow the play to select the difficulty of the game. 
 With this suggestion:
