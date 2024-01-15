@@ -82,7 +82,7 @@ The game harnesses the "random" module to select a word at random.
 
 The words are stored in a library which are in their own .py file. This is to keep that data free from cluttering the main code and prevent the risk of misakes being made on main code if library is editied.
 
-Visual reprisentation of an incorrect guess is used by having the stick-man shown and also have it move along the play area with each bad guess.
+Visual representation of an incorrect guess is used by having the stick-man shown and also have it move along the play area with each bad guess.
 This is done by an if statement that prints the cliffhanger_display(+1) with each incorrect guess.
 
 Game progress is stored and shown to the player.
@@ -134,3 +134,7 @@ Heroku is used to display game code in terminal.
     - Uploaded repository then viewed.
 
 ## Credits
+
+All learnings and techniques were learnt with the Python Essentials and Love Sandwiches project.
+With the exception of importing a .py file containing words which was learned from textbook
+[Python Programming for beginners - Mark Reed](https://www.amazon.co.uk/Python-Programming-Beginners-Step-Step/dp/B0B7QPFY8K/ref=sr_1_4?crid=1OJGZJVPAXBHA&keywords=python+programming+mark+reed&qid=1705352091&sprefix=python+programming+mark+reed%2Caps%2C63&sr=8-4) Chapter 8.
