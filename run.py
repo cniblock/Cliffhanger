@@ -95,7 +95,7 @@ while play:
                 print()
                 print(" You have already guessed this letter. "
                       "Please guess another letter.")
-                letter_user = input(" Enter a letter: ")
+                letter_user = input(" Enter a letter: ").lower()
 
             # Check if the guessed letter is incorrect
             if letter_user not in letters_word:
