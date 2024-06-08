@@ -8,7 +8,8 @@ def get_word():
     return word.lower()
 
 
-    # Stages of incorrect guesses
+def display_cliffhanger(stage):
+    """Function to display the current state of the cliffhanger."""
     cliffhanger_display = [
         """
              O     You got this!
@@ -59,6 +60,7 @@ def get_word():
             ---------------------------¬
         """,
     ]
+    print(cliffhanger_display[stage])
 
     # Variables
     word = get_word()
