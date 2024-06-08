@@ -63,18 +63,17 @@ def display_cliffhanger(stage):
     ]
     print(cliffhanger_display[stage])
 
-    # Variables
+def play_game():
+    """Main function to play the game."""
     word = get_word()
-    incorrect_guesses = 0
-    letters_guessed = []
-    incorrect_guesses_allowed = len(cliffhanger_display)
     letters_word = list(word)
-    wrong_letters = []
+    letters_guessed = set()
+    wrong_letters = set()
+    incorrect_guesses = 0
+    incorrect_guesses_allowed = 7
 
-    # Initial print at the start of the game
-    print()
-    print(" Welcome to the CLIFFHANGER word guessing game\n")
-    print(" The word has {} letters\n".format(len(letters_word)))
+    print("\n Welcome to the CLIFFHANGER word guessing game\n")
+    print(f" The word has {len(letters_word)} letters\n")
 
     # While loop to check guesses / wrong guesses / ask for user input
     while incorrect_guesses < incorrect_guesses_allowed:
