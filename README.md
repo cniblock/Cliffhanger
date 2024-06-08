@@ -80,6 +80,32 @@ With this suggestion:
 
 Allow the player to add words of their own to the library.
 
+## Functions
+
+* get_word
+
+![Get Word](images/func-get-word.jpg)
+
+* display_hangman
+
+![Display Cliffhanger](images/func-display-hangman.jpg)
+
+* display_word
+
+![Display Word](images/func-display-word.jpg)
+
+* get_user_input
+
+![Get User Input](images/func-get-user-input.jpg)
+
+* play_game
+
+![Play Game](images/func-play-game.jpg)
+
+* main
+
+![Main](images/func-main.jpg)
+
 ## Data Model
 
 The game harnesses the "random" module to select a word at random.
@@ -102,6 +128,10 @@ Upon game outcome, the game loop is either restarted or exited depending on user
 ### Manual Testing
 
 ![Manual Test](images/cliff-tests.jpg)
+
+### Validation
+
+![Linter Pass](images/linter-pass.jpg)
 
 ### Bugs
 
