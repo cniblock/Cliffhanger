@@ -63,6 +63,18 @@ def display_cliffhanger(stage):
     ]
     print(cliffhanger_display[stage])
 
+def get_user_input(letters_guessed, wrong_letters):
+    """Function to get a valid letter guess from the user."""
+    while True:
+        letter_user = input(" Enter a letter: ").lower()
+        if len(letter_user) == 1 and letter_user.isalpha():
+            if letter_user in letters_guessed or letter_user in wrong_letters:
+                print(" You have already guessed this letter. Please guess another letter.")
+            else:
+                return letter_user
+        else:
+            print(" Invalid input. Please enter a single alphabet letter.")
+
 def play_game():
     """Main function to play the game."""
     word = get_word()
@@ -97,18 +109,6 @@ def play_game():
     if incorrect_guesses == incorrect_guesses_allowed:
         print("\n You lost! Better luck next time!")
         print(f" The correct word was: {word} \n")
-
-        # Validate user input
-        if len(letter_user) == 1 and letter_user.isalpha():
-            # Check if the letter has already been guessed
-            while (
-                letter_user in letters_guessed or
-                letter_user in wrong_letters
-            ):
-                print()
-                print(" You have already guessed this letter. "
-                      "Please guess another letter.")
-                letter_user = input(" Enter a letter: ").lower()
 
             # Check if the guessed letter is incorrect
             if letter_user not in letters_word:
