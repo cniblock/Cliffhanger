@@ -13,51 +13,51 @@ def display_cliffhanger(stage):
     """Function to display the current state of the cliffhanger."""
     cliffhanger_display = [
         """
-             O     Oops! You got this!
+             O     Ok, Let's Play!
             \\|/
             / \\
             ---------------------------¬
         """,
         """
-             O     Oops! It's ok!
-            \\|/
-            / \\
+                  O     Oops! That was wrong!
+                 \\|/
+                 / \\
             ---------------------------¬
         """,
         """
-             O     Oops! I believe in you!
-            \\|/
-            / \\
+                      O     Oops! I believe in you!
+                     \\|/
+                     / \\
             ---------------------------¬
         """,
         """
-             O     Oops! you can do it!
-            \\|/
-            / \\
+                          O     Oops! you can do it!
+                         \\|/
+                         / \\
             ---------------------------¬
         """,
         """
-             O     Oops! oh dear!
-            \\|/
-            / \\
+                              O     Oops! oh dear!
+                             \\|/
+                             / \\
             ---------------------------¬
         """,
         """
-             O     Oops! I can see the edge!
-            \\|/
-            / \\
+                                 O     Oops! I can see the edge!
+                                \\|/
+                                / \\
             ---------------------------¬
         """,
         """
-             O     Oops! oh no!
-            \\|/
-            / \\
+                                     O     Oops! oh no!
+                                    \\|/
+                                    / \\
             ---------------------------¬
         """,
         """
-             \\ O /     arrghh!!!
-              |
-             / \\
+                                          \\ O /     arrghh!!!
+                                            |
+                                           / \\
             ---------------------------¬
         """,
     ]
@@ -102,6 +102,7 @@ def play_game():
     print(f" The word has {len(letters_word)} letters\n")
 
     while incorrect_guesses < incorrect_guesses_allowed:
+        display_cliffhanger(incorrect_guesses)
         print(" Incorrect letters guessed: " + ",".join(sorted(wrong_letters)))
         print(f" Guesses remaining: "
               f"{incorrect_guesses_allowed - incorrect_guesses}")
@@ -111,20 +112,22 @@ def play_game():
         if letter_user not in letters_word:
             incorrect_guesses += 1
             wrong_letters.add(letter_user)
+
         else:
             letters_guessed.add(letter_user)
-        display_cliffhanger(incorrect_guesses)
 
         if set(letters_word) <= letters_guessed:
             print("\n CONGRATULATIONS! You won!")
             break
 
     if incorrect_guesses == incorrect_guesses_allowed:
+        display_cliffhanger(incorrect_guesses)
         print("\n You lost! Better luck next time!")
         print(f" The correct word was: {word} \n")
 
 
 def main():
+    """Main function to manage the game loop and replay functionality."""
     play = True
     while play:
         play_game()
