@@ -142,5 +142,7 @@ def main():
             print(" Thanks for playing")
             play = False
 
+
 if __name__ == "__main__":
     main()
+    
