@@ -75,15 +75,28 @@ def play_game():
     print("\n Welcome to the CLIFFHANGER word guessing game\n")
     print(f" The word has {len(letters_word)} letters\n")
 
-    # While loop to check guesses / wrong guesses / ask for user input
     while incorrect_guesses < incorrect_guesses_allowed:
-        print(" Incorrect letters guessed: ", end='')
-        for letter in wrong_letters:
-            print("{}, ".format(letter), end='')
-        print()
-        print(" Guesses remaining: {}".format(
-            incorrect_guesses_allowed - incorrect_guesses))
-        letter_user = input(" Enter a letter: ").lower()
+        print(" Incorrect letters guessed: " + ", ".join(sorted(wrong_letters)))
+        print(f" Guesses remaining: {incorrect_guesses_allowed - incorrect_guesses}")
+        display_word(letters_word, letters_guessed)
+        
+        letter_user = get_user_input(letters_guessed, wrong_letters)
+
+        if letter_user not in letters_word:
+            incorrect_guesses += 1
+            wrong_letters.add(letter_user)
+        else:
+            letters_guessed.add(letter_user)
+
+        display_cliffhanger(incorrect_guesses)
+
+        if set(letters_word) <= letters_guessed:
+            print("\n CONGRATULATIONS! You won!")
+            break
+
+    if incorrect_guesses == incorrect_guesses_allowed:
+        print("\n You lost! Better luck next time!")
+        print(f" The correct word was: {word} \n")
 
         # Validate user input
         if len(letter_user) == 1 and letter_user.isalpha():
@@ -118,34 +131,5 @@ def play_game():
                     print("_ ", end="")
             print()
 
-            # Print Cliffhanger man if incorrect guess
-            if incorrect_guesses:
-                print(cliffhanger_display[incorrect_guesses - 1])
-
-            # Print game win
-            if len(letters_guessed) == len(letters_word):
-                print()
-                print(" CONGRATULATIONS! You won!")
-                play_again = input(
-                    " Would you like to play again? (y/n) ").lower()
-                print()
-                if play_again == "n":
-                    print(" Thanks for playing")
-                    play = False
-                    break
-                elif play_again == "y":
-                    break
-
-    # Print loss of game
-    if incorrect_guesses == incorrect_guesses_allowed:
-        print()
-        print(" You lost! Better luck next time!")
-        print(" The correct word was: {} \n".format(word))
-        play_again = input(
-            " Would you like to play again? (y/n) ").lower()
-        print()
-        if play_again == "n":
-            print(" Thanks for playing")
-            play = False
-        elif play_again == "y":
-            break
+            
+    
