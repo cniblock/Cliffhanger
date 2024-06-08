@@ -2,13 +2,11 @@
 import random
 from words import word_library
 
-play = True
+def get_word():
+    """Function to get a random word from the library."""
+    word = random.choice(word_library)
+    return word.lower()
 
-while play:
-    # Function to get random word from Library
-    def get_word():
-        word = random.choice(word_library)
-        return word.lower()
 
     # Stages of incorrect guesses
     cliffhanger_display = [
