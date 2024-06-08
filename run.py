@@ -1,68 +1,70 @@
-# Commands for random module and to link words from words_library 
-import random 
+# Commands for random module and to link words from words_library
+import random
 from words import word_library
+
 play = True
 
-while play == True:
+while play:
     # Function to get random word from Library
     def get_word():
         word = random.choice(word_library)
         return word.lower()
 
     # Stages of incorrect guesses
-    cliffhanger_display = ["""
+    cliffhanger_display = [
+        """
              O     You got this!
             \\|/
             / \\
             ---------------------------¬
-                """,
-                """
-                 O     It's ok!
-                \\|/
-                / \\
+        """,
+        """
+             O     It's ok!
+            \\|/
+            / \\
             ---------------------------¬
-                """,
-                """
-                     O     I believe in you!
-                    \\|/
-                    / \\
+        """,
+        """
+             O     I believe in you!
+            \\|/
+            / \\
             ---------------------------¬
-                """,
-                """
-                         O     you can do it!
-                        \\|/
-                        / \\
+        """,
+        """
+             O     you can do it!
+            \\|/
+            / \\
             ---------------------------¬
-                """,
-                """
-                             O     oh dear!
-                            \\|/
-                            / \\
+        """,
+        """
+             O     oh dear!
+            \\|/
+            / \\
             ---------------------------¬
-                """,
-                """
-                                 O     I can see the edge!
-                                \\|/
-                                / \\
+        """,
+        """
+             O     I can see the edge!
+            \\|/
+            / \\
             ---------------------------¬
-                """,
-                """
-                                     O     oh no!
-                                    \\|/
-                                    / \\
+        """,
+        """
+             O     oh no!
+            \\|/
+            / \\
             ---------------------------¬
-                """,
-                """
-                                            \\ O /     arrghh!!!
-                                              |
-                                             / \\
+        """,
+        """
+             \\ O /     arrghh!!!
+              |
+             / \\
             ---------------------------¬
-                """,
-        ]
+        """,
+    ]
 
     # Variables
-    word = get_word() 
-    incorrect_guesses = 0 
+    word = get_word()
+    incorrect_guesses = 0
     letters_guessed = []
     incorrect_guesses_allowed = len(cliffhanger_display)
     letters_word = list(word)
@@ -79,15 +81,20 @@ while play == True:
         for letter in wrong_letters:
             print("{}, ".format(letter), end='')
         print()
-        print(" Guesses remaining: {}".format(incorrect_guesses_allowed - incorrect_guesses))
+        print(" Guesses remaining: {}".format(
+            incorrect_guesses_allowed - incorrect_guesses))
         letter_user = input(" Enter a letter: ").lower()
 
         # Validate user input
         if len(letter_user) == 1 and letter_user.isalpha():
             # Check if the letter has already been guessed
-            while letter_user in letters_guessed or letter_user in wrong_letters:
+            while (
+                letter_user in letters_guessed or
+                letter_user in wrong_letters
+            ):
                 print()
-                print(" You have already guessed this letter. Please guess another letter.")
+                print(" You have already guessed this letter. "
+                      "Please guess another letter.")
                 letter_user = input(" Enter a letter: ")
 
             # Check if the guessed letter is incorrect
@@ -119,8 +126,9 @@ while play == True:
             if len(letters_guessed) == len(letters_word):
                 print()
                 print(" CONGRATULATIONS! You won!")
-                play_again = input(" Would you like to play again? (y/n) ").lower()
-                print() 
+                play_again = input(
+                    " Would you like to play again? (y/n) ").lower()
+                print()
                 if play_again == "n":
                     print(" Thanks for playing")
                     play = False
@@ -129,14 +137,15 @@ while play == True:
                     break
 
     # Print loss of game
-        if incorrect_guesses == incorrect_guesses_allowed:
-            print()
-            print(" You lost! Better luck next time!")
-            print(" The correct word was: {} \n".format(word))
-            play_again = input(" Would you like to play again? (y/n) ").lower()
-            print()
-            if play_again == "n":
-                print(" Thanks for playing")
-                play = False
-            elif play_again == "y":
-                break
+    if incorrect_guesses == incorrect_guesses_allowed:
+        print()
+        print(" You lost! Better luck next time!")
+        print(" The correct word was: {} \n".format(word))
+        play_again = input(
+            " Would you like to play again? (y/n) ").lower()
+        print()
+        if play_again == "n":
+            print(" Thanks for playing")
+            play = False
+        elif play_again == "y":
+            break
