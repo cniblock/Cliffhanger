@@ -82,6 +82,8 @@ Allow the player to add words of their own to the library.
 
 ## Functions
 
+Following the assessors feedback functions were implemented.
+
 * get_word
 
 ![Get Word](images/func-get-word.jpg)
@@ -137,22 +139,19 @@ Upon game outcome, the game loop is either restarted or exited depending on user
 
 #### Solved Bugs
 
+Following the assessors feedback the following issues has been resolved:
+
+- Exit loop after win and player not wanting to play again. Fixed by adding break under that specific if condition when the player does not want to play again.
+- Functionality Bugs. There were minor bugs affecting the overall functionality, including the incorrect display of the cliffhanger state after a correct guess.
+- The code had inconsistent line spacing, spacing between functions, and indentation which led to linter validation errors.
+- User feedback and issue handling invalid inputs. There was no proper feedback for invalid inputs, and the function could break if empty or invalid data was entered.
+- Inconsistent flow of data between functions. There was no proper feedback for invalid inputs, and the function could break if empty or invalid data was entered.
+- User could bypass the play again prompt. Users could bypass the play-again prompt and continue guessing letters on an already guessed word.
 - Error corrected due to " / " on stickman. This was resolved by adding an additional "/" 
-- Exit loop after win and player not wanting to play again. Fixed by adding break under that specific if condition.
 
 #### Remaining Bugs
 
-- Inconsistancy in uppercase input. Some uppercase letters are accepted but not all. 
-
-![Screenshot of error uppercase](images/test8.jpg)
-
-- Any letter input when asked play again (with the exception of n) will be accepted as a yes "y". No "n" is currently working correctly, however.
-
-![Screenshot of error uppercase](images/test9.jpg)
-
-### Validator Testing
-
-- PEP8 has been used for testing - errors are stated, however the code works in the Heroku terminal.
+All bugs have been resolved
 
 ## Deployment
 
