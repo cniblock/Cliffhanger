@@ -13,43 +13,43 @@ def display_cliffhanger(stage):
     """Function to display the current state of the cliffhanger."""
     cliffhanger_display = [
         """
-             O     You got this!
+             O     Oops! You got this!
             \\|/
             / \\
             ---------------------------¬
         """,
         """
-             O     It's ok!
+             O     Oops! It's ok!
             \\|/
             / \\
             ---------------------------¬
         """,
         """
-             O     I believe in you!
+             O     Oops! I believe in you!
             \\|/
             / \\
             ---------------------------¬
         """,
         """
-             O     you can do it!
+             O     Oops! you can do it!
             \\|/
             / \\
             ---------------------------¬
         """,
         """
-             O     oh dear!
+             O     Oops! oh dear!
             \\|/
             / \\
             ---------------------------¬
         """,
         """
-             O     I can see the edge!
+             O     Oops! I can see the edge!
             \\|/
             / \\
             ---------------------------¬
         """,
         """
-             O     oh no!
+             O     Oops! oh no!
             \\|/
             / \\
             ---------------------------¬
@@ -62,6 +62,16 @@ def display_cliffhanger(stage):
         """,
     ]
     print(cliffhanger_display[stage])
+
+def display_word(letters_word, letters_guessed):
+    """Function to display the current state of the guessed word."""
+    display = ""
+    for letter in letters_word:
+        if letter in letters_guessed:
+            display += letter + " "
+        else:
+            display += "_ "
+    print(" Word: " + display)
 
 def get_user_input(letters_guessed, wrong_letters):
     """Function to get a valid letter guess from the user."""
@@ -122,12 +132,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-            # Show correctly guessed letters
-            print()
-            print(" Word: ", end="")
-
-            
-
-            
-    
