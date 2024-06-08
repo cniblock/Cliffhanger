@@ -2,6 +2,7 @@
 import random
 from words import word_library
 
+
 def get_word():
     """Function to get a random word from the library."""
     word = random.choice(word_library)
