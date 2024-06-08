@@ -131,12 +131,16 @@ def main():
     play = True
     while play:
         play_game()
-        play_again = input(" Would you like to play again? (y/n) ").lower()
+        while True:
+            play_again = input(" Would you like to play again? (y/n) ").lower()
+            if play_again in ["y", "n"]:
+                break
+            else:
+                print(" Invalid input. Please enter 'y' or 'n'.")
         print()
         if play_again == "n":
             print(" Thanks for playing")
             play = False
-
 
 if __name__ == "__main__":
     main()
