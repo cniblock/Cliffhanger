@@ -110,26 +110,24 @@ def play_game():
         print("\n You lost! Better luck next time!")
         print(f" The correct word was: {word} \n")
 
-            # Check if the guessed letter is incorrect
-            if letter_user not in letters_word:
-                incorrect_guesses += 1
-                wrong_letters.append(letter_user)
+def main():
+    play = True
+    while play:
+        play_game()
+        play_again = input(" Would you like to play again? (y/n) ").lower()
+        print()
+        if play_again == "n":
+            print(" Thanks for playing")
+            play = False
 
+if __name__ == "__main__":
+    main()
+    
             # Show correctly guessed letters
             print()
             print(" Word: ", end="")
 
-            # For loop to add letter to guesses and check if letter is in word
-            for letter in letters_word:
-                if letter_user == letter:
-                    letters_guessed.append(letter_user)
-
-            for letter in letters_word:
-                if letter in letters_guessed:
-                    print(letter + " ", end="")
-                else:
-                    print("_ ", end="")
-            print()
+            
 
             
     
