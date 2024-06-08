@@ -31,13 +31,13 @@ def display_cliffhanger(stage):
             ---------------------------¬
         """,
         """
-                          O     Oops! you can do it!
+                          O     Oops! You can do it!
                          \\|/
                          / \\
             ---------------------------¬
         """,
         """
-                              O     Oops! oh dear!
+                              O     Oops! Oh dear!
                              \\|/
                              / \\
             ---------------------------¬
@@ -49,13 +49,13 @@ def display_cliffhanger(stage):
             ---------------------------¬
         """,
         """
-                                     O     Oops! oh no!
+                                     O     Oops! Oh no!
                                     \\|/
                                     / \\
             ---------------------------¬
         """,
         """
-                                          \\ O /     arrghh!!!
+                                          \\ O /     Arrghh!!!
                                             |
                                            / \\
             ---------------------------¬

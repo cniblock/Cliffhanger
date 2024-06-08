@@ -99,11 +99,9 @@ Upon game outcome, the game loop is either restarted or exited depending on user
 
 ## Testing
 
-The game has been consistantly tested throughout the projects development.
+### Manual Testing
 
-- The code has been passed through PEP8, the application is showing errors for multiple trailing backslashes, where there are none.
-- PEP8 is also showing errors for the double "//" for the stickmans arms or legs, although the code works fine in Heroku terminal.
-- Testing has been conducted numerous times and final commit contains no major bugs.
+![Manual Test](images/cliff-tests.jpg)
 
 ### Bugs
 
