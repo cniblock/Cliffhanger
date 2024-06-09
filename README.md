@@ -2,15 +2,11 @@
 
 ![Screenshot of banner](images/banner.jpg)
 
-CliffHanger is a text-based Python terminal game. The program runs in Code Institutes mock terminal on Heroku.
+CliffHanger is a text-based Python terminal game that runs in Code Institute's mock terminal on Heroku. It offers a fresh twist on the classic Hangman game.
 
-CliffHanger is a new take on the popular Hangman game. 
+In CliffHanger, the player's goal is to guess a hidden word, knowing only the number of letters it contains. Each incorrect guess moves the CliffHanger stick-man closer to the edge of a cliff. If the player uses up all their attempts, the stick-man takes an unfortunate tumble off the cliff.
 
-The player's aim is to guess a word with only the amount of letters in that word being known to them.
-
-The players incorrect guesses move the Cliffhanger stick-man closer to the edge of a cliff, with the Stickman taking an unlucky tumble if the player uses up all their attempts at guessing the word.
-
-There is a vast library of words the program has access to, which gives the player a real challenge in solving. Over 170 words!!!
+With a vast library of over 170 words, CliffHanger provides a challenging and engaging experience for players.
 
 [View the live version of the game here. Enjoy!](https://cliff-hanger-69cb06fcdcfe.herokuapp.com/)
 
@@ -19,25 +15,30 @@ There is a vast library of words the program has access to, which gives the play
 ## How to play
 
 If you are familiar with the word guessing game "Hangman" then you will get the gist of Cliffhanger.
+
 If you have never played Hangman, please view the [rules and concept of the game here](https://en.wikipedia.org/wiki/Hangman_(game)#:~:text=Hangman%20is%20a%20guessing%20game,there%20are%20now%20electronic%20versions.).
 
-When the game begins you will be informed of how many letters the word you need to guess contains.
+#### Game Start
 
-You will then be asked to input a letter.
+* Word Length Notification: When the game begins, you will be informed of the number of letters in the word you need to guess.
 
-Upon the letter you input being correct, your correctly guessed letter will be shown and at what point in the word your letter belongs.
+#### Making Guesses
 
-If you guess an incorrect letter, the CliffHanger stickman will move along the play area and your incorrect guess will be logged.
+* Input a Letter: You will be prompted to input a letter.
+* Correct Guess: If your guess is correct, the letter will be revealed in its correct position(s) in the word.
+* Incorrect Guess: If your guess is incorrect, the Cliffhanger stickman will move closer to the cliff edge, and your incorrect guess will be logged.
 
-If you guess too many incorrect letters, the CliffHanger man will take tumble off the cliff, and you lose the game.
+#### Game Progress
 
-On guessing the correct word, congratulations, you will be informed you have won the game.
+* Tracking Incorrect Guesses: Your incorrect guesses are displayed, and the number of remaining attempts is shown.
+* Winning the Game: If you correctly guess all the letters in the word, you win the game and will be congratulated.
+* Losing the Game: If you guess too many incorrect letters, the stickman will fall off the cliff, and you will lose the game.
 
-After winning or losing you will be asked if you want to play the game again.
+#### Replay Option
 
-If you select "y" the game will start over, and you can play a new game.
-
-If you select "n" you will be shown a message "Thanks for playing" and the game will end.
+* Play Again Prompt: After winning or losing, you will be asked if you want to play the game again.
+* Select "y": The game will start over with a new word, allowing you to play another round.
+* Select "n": You will be shown a message saying "Thanks for playing," and the game will end.
 
 ## Features
 
@@ -72,17 +73,27 @@ If you select "n" you will be shown a message "Thanks for playing" and the game 
 
 ### Future Features
 
-Allow the player to select the difficulty of the game. 
-With this suggestion:
-- 6 attempt - Hard
-- 8 attempts - Medium (current format)
-- 10 attempts - Easy
+Here are some possible future features that could enhance the CliffHanger game:
 
-Allow the player to add words of their own to the library.
+* Difficulty Levels:
+
+Allow the player to select the difficulty of the game.
+Hard: 6 attempts
+Medium: 7 attempts (current format)
+Easy: 9 attempts
+
+* Leaderboard:
+
+Implement a leaderboard to track high scores and fastest completion times.
+Option to display the top players and their scores.
+
+* Custom Word Library:
+
+Allow players to add their own words to the library.
 
 ## Functions
 
-Following the assessors feedback functions were implemented.
+Following the assessors feedback functions were implemented instead of the game being one while loop.
 
 * get_word
 

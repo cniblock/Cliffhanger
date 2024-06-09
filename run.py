@@ -19,6 +19,12 @@ def display_cliffhanger(stage):
             ---------------------------¬
         """,
         """
+                O   Oops! Nice try!
+               \\|/
+               / \\
+            ---------------------------¬
+        """,
+        """
                   O     Oops! That was wrong!
                  \\|/
                  / \\
