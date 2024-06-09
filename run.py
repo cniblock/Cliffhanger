@@ -84,7 +84,7 @@ def display_word(letters_word, letters_guessed):
 def get_user_input(letters_guessed, wrong_letters):
     """Function to get a valid letter guess from the user."""
     while True:
-        letter_user = input(" Enter a letter: ").lower()
+        letter_user = input(" Enter a letter: \n").lower()
         if len(letter_user) == 1 and letter_user.isalpha():
             if letter_user in letters_guessed or letter_user in wrong_letters:
                 print(" You have already guessed this letter. "

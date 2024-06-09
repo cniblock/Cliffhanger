@@ -4,7 +4,7 @@
 
 CliffHanger is a text-based Python terminal game that runs in Code Institute's mock terminal on Heroku. It offers a fresh twist on the classic Hangman game.
 
-In CliffHanger, the player's goal is to guess a hidden word, knowing only the number of letters it contains. Each incorrect guess moves the CliffHanger stick-man closer to the edge of a cliff. If the player uses up all their attempts, the stick-man takes an unfortunate tumble off the cliff.
+In CliffHanger, the player's goal is to guess a hidden word, knowing only the number of letters it contains. Each incorrect guess moves the CliffHanger stickman closer to the edge of a cliff. If the player uses up all their attempts, the stickman takes an unfortunate tumble off the cliff.
 
 With a vast library of over 170 words, CliffHanger provides a challenging and engaging experience for players.
 
