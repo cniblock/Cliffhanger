@@ -75,19 +75,19 @@ If you have never played Hangman, please view the [rules and concept of the game
 
 Here are some possible future features that could enhance the CliffHanger game:
 
-* Difficulty Levels:
+* **Difficulty Levels:**
 
 Allow the player to select the difficulty of the game.
 Hard: 6 attempts
 Medium: 7 attempts (current format)
 Easy: 9 attempts
 
-* Leaderboard:
+* **Leaderboard:** 
 
 Implement a leaderboard to track high scores and fastest completion times.
 Option to display the top players and their scores.
 
-* Custom Word Library:
+* **Custom Word Library:**
 
 Allow players to add their own words to the library.
 
@@ -95,37 +95,37 @@ Allow players to add their own words to the library.
 
 Following the assessors feedback functions were implemented instead of the game being one while loop.
 
-* get_word
+* **get_word**
 
 The get_word function selects a random word from a list of words in word_library and returns it in lowercase.
 
 ![Get Word](images/func-get-word.jpg)
 
-* display_hangman
+* **display_hangman**
 
 The display_cliffhanger function displays the current visual state of the cliffhanger hangman based on the number of incorrect guesses made by the player. The first stage of the hangman is now displayed at the start of the game to give the player the visuals prior to an incorrect guess.
 
 ![Display Cliffhanger](images/func-display-hangman.jpg)
 
-* display_word
+* **display_word**
 
 The display_word function shows the current state of the word being guessed by displaying correctly guessed letters and underscores for remaining letters.
 
 ![Display Word](images/func-display-word.jpg)
 
-* get_user_input
+* **get_user_input**
 
 The get_user_input function prompts the player to enter a valid letter guess and makes sure that the input is appropriate and has not been guessed before.
 
 ![Get User Input](images/func-get-user-input.jpg)
 
-* play_game
+* **play_game**
 
 The play_game function manages the main logic of the Cliffhanger game, handling the game flow from start to end, including guessing letters, updating the game state, and determining win or loss conditions.
 
 ![Play Game](images/func-play-game.jpg)
 
-* main
+* **main**
 
 The main function manages the overall game loop and handles the replay functionality, allowing the player to play multiple rounds of the game.
 
@@ -137,34 +137,34 @@ The CliffHanger game has a structured data model to manage the game, track progr
 
 ### Word Selection
 
-* Random Module: The game uses Python's random module to select a word at random from a predefined list.
-* Word Library: Words are stored in a separate words.py file, keeping the main code clean and reducing the risk of errors during editing. This approach also allows for easy expansion of the word list.
+* **Random Module:** The game uses Python's random module to select a word at random from a predefined list.
+* **Word Library:** Words are stored in a separate words.py file, keeping the main code clean and reducing the risk of errors during editing. This approach also allows for easy expansion of the word list.
 
 ### Visual Representation
 
-* Cliffhanger Display: The visual state of the stickman is represented through a series of strings in a list called cliffhanger_display. Each string corresponds to a stage of the game, showing the stickman's progression towards the cliff edge with each incorrect guess.
-* Dynamic Display Update: The game uses an if-statement to update and print the appropriate visual stage from the cliffhanger_display list based on the number of incorrect guesses.
+* **Cliffhanger Display:** The visual state of the stickman is represented through a series of strings in a list called cliffhanger_display. Each string corresponds to a stage of the game, showing the stickman's progression towards the cliff edge with each incorrect guess.
+* **Dynamic Display Update:** The game uses an if-statement to update and print the appropriate visual stage from the cliffhanger_display list based on the number of incorrect guesses.
 
 ### Game Progress
 
-* Letters Guessed: The game maintains sets for letters_guessed and wrong_letters to track the letters the player has guessed correctly and incorrectly.
-* Current Word State: The current state of the word being guessed is displayed using underscores for unguessed letters and the actual letters for correctly guessed ones.
+* **Letters Guessed:** The game maintains sets for letters_guessed and wrong_letters to track the letters the player has guessed correctly and incorrectly.
+* **Current Word State:** The current state of the word being guessed is displayed using underscores for unguessed letters and the actual letters for correctly guessed ones.
 
 ### Game Logic
 
-* Main Game Loop: The main game logic is in the play_game function. This loop continues until the player either guesses the word correctly or used all allowed incorrect guesses.
-* User Input: User input is validated to ensure it is a single alphabet letter that hasn't been guessed before.
-* Feedback: The game provides real-time feedback to the player, displaying the current state of the word, incorrect guesses, and the remaining number of guesses.
+* **Main Game Loop:** The main game logic is in the play_game function. This loop continues until the player either guesses the word correctly or used all allowed incorrect guesses.
+* **User Input:** User input is validated to ensure it is a single alphabet letter that hasn't been guessed before.
+* **Feedback:** The game provides real-time feedback to the player, displaying the current state of the word, incorrect guesses, and the remaining number of guesses.
 
 ### Game Outcome
 
-* Winning Condition: If the player guesses all letters in the word correctly, a congratulations message is displayed, and the game asks the player to play again.
-* Losing Condition: If the player reaches the maximum number of incorrect guesses, the final state of the cliffhanger is displayed, and the correct word is revealed.
+* **Winning Condition:** If the player guesses all letters in the word correctly, a congratulations message is displayed, and the game asks the player to play again.
+* **Losing Condition:** If the player reaches the maximum number of incorrect guesses, the final state of the cliffhanger is displayed, and the correct word is revealed.
 
 ### Replay Functionality
 
-* Replay Prompt: After each game round, the player is asked whether they want to play again. The game loop is either restarted or exited based on the player's input.
-* Input Validation: Ensures that only valid responses ('y' or 'n') are accepted for the replay prompt, enhancing the user experience and preventing unintended behavior.
+* **Replay Prompt:** After each game round, the player is asked whether they want to play again. The game loop is either restarted or exited based on the player's input.
+* **Input Validation:** Ensures that only valid responses ('y' or 'n') are accepted for the replay prompt, enhancing the user experience and preventing unintended behavior.
 
 #### Logic Flowchart
 
