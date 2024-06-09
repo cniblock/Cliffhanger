@@ -168,7 +168,9 @@ The CliffHanger game has a structured data model to manage the game, track progr
 
 #### Logic Flowchart
 
-![Screenshot of Flowchart](images/flowchart.jpg)
+Updated flowchart since functions were used:
+
+![Screenshot of Flowchart](images/cliffhanger-flowchart.jpg)
 
 ## Testing
 
@@ -191,11 +193,17 @@ Code was validated using PEP8 linter to ensure it adheres to Python coding stand
 Following the assessors feedback the following issues has been resolved:
 
 - **Exit loop after win and player not wanting to play again.** Fixed by adding break under that specific if condition when the player does not want to play again.
+
 - **Functionality Bugs.** There were minor bugs affecting the overall functionality, including the incorrect display of the cliffhanger state after a correct guess.
+
 - **Inconsistent Line Spacing and Indentation.** Code was refactored to ensure consistent spacing and indentation, passing PEP8 linter checks.
+
 - **User feedback and issue handling invalid inputs.** There was no proper feedback for invalid inputs, and the function could break if empty or invalid data was entered.
+
 - **Inconsistent flow of data between functions.** There was no proper feedback for invalid inputs, and the function could break if empty or invalid data was entered.
+
 - **User could bypass the play again prompt.** Users could bypass the play-again prompt and continue guessing letters on an already guessed word.
+
 - **Stickman Display Error.** Resolved by adding an additional "/" to ensure correct rendering.
 #### Remaining Bugs
 
