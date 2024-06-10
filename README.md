@@ -182,7 +182,7 @@ Manual tests were performed to ensure the game functions correctly. The followin
 
 ### Validation
 
-Code was validated using PEP8 linter to ensure it adheres to Python coding standards.
+Code was validated using PEP8 linter to ensure it adheres to Python coding standards. Both run.py and words.py
 
 ![Linter Pass](images/linter-pass.jpg)
 
@@ -192,19 +192,32 @@ Code was validated using PEP8 linter to ensure it adheres to Python coding stand
 
 Following the assessors feedback the following issues has been resolved:
 
-- **Exit loop after win and player not wanting to play again.** Fixed by adding break under that specific if condition when the player does not want to play again.
+- **Exit loop after win and player not wanting to play again.** 
+- **Issue:** The game did not properly exit after the player won and chose not to play again.
+- **Fix:** Added a break statement under the specific condition when the player does not want to play again. This makes sure that the game loop exits correctly.
 
-- **Functionality Bugs.** There were minor bugs affecting the overall functionality, including the incorrect display of the cliffhanger state after a correct guess.
+- **Functionality Bugs.** 
+- **Issue:** There were minor bugs affecting the overall functionality, including the incorrect display of the cliffhanger state after a correct guess.
+- **Fix:** Refactored the logic to ensure that the cliffhanger state is only updated and displayed after an incorrect guess. This was achieved by placing the display_cliffhanger function call within the conditional block.
 
-- **Inconsistent Line Spacing and Indentation.** Code was refactored to ensure consistent spacing and indentation, passing PEP8 linter checks.
+- **Inconsistent Line Spacing and Indentation.** 
+- **Issue:** The code had inconsistent line spacing and indentation, leading to linter validation errors.
+- **Fix:** Refactored the entire codebase to ensure consistent spacing and indentation, adhering to PEP8 standards. This included aligning hanging indents and ensuring proper spacing between functions and statements.
 
-- **User feedback and issue handling invalid inputs.** There was no proper feedback for invalid inputs, and the function could break if empty or invalid data was entered.
+- **User feedback and issue handling invalid inputs.**
+- **Issue:** There was no proper feedback for invalid inputs, and the function could break if empty or invalid data was entered.
+- **Fix:** Added input validation to handle invalid inputs. The get_user_input function now ensures that the user input is a single alphabet letter and provides feedback if the input is invalid.
 
-- **Inconsistent flow of data between functions.** There was no proper feedback for invalid inputs, and the function could break if empty or invalid data was entered.
+- **Inconsistent flow of data between functions.**
+- **Issue:** There was no proper feedback for invalid inputs, and the function could break if empty or invalid data was entered.
+- **Fix:** Improved the flow of data between functions by ensuring that all necessary information is passed between them. This involved updating function signatures and return values.
 
-- **User could bypass the play again prompt.** Users could bypass the play-again prompt and continue guessing letters on an already guessed word.
+- **User could bypass the play again prompt.**
+- **Issue:** Users could bypass the play-again prompt and continue guessing letters on an already guessed word.
+- **Fix:** Added validation to the play-again prompt to ensure only valid responses ('y' or 'n') are accepted. This prevents users from bypassing the prompt and ensures the game behaves as expected.
 
 - **Stickman Display Error.** Resolved by adding an additional "/" to ensure correct rendering.
+
 #### Remaining Bugs
 
 All bugs have been resolved
