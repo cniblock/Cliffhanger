@@ -227,5 +227,10 @@ Heroku is used to display game code in terminal.
 ## Credits
 
 All learnings and techniques were learnt with the Python Essentials and Love Sandwiches project.
+
 With the exception of importing a .py file containing words which was learned from textbook
 [Python Programming for beginners - Mark Reed](https://www.amazon.co.uk/Python-Programming-Beginners-Step-Step/dp/B0B7QPFY8K/ref=sr_1_4?crid=1OJGZJVPAXBHA&keywords=python+programming+mark+reed&qid=1705352091&sprefix=python+programming+mark+reed%2Caps%2C63&sr=8-4) Chapter 8.
+
+### Acknowledgements
+
+Big thanks for Code Institute tutors and mentor. And the slack community for support with this project.
